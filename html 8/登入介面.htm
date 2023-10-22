@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Password Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        #verification-container {
+            text-align: center;
+            margin-top: 100px;
+        }
+        #verification-form {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #password {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+        }
+        #verify-button {
+            background-color: #4285f4;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        #verification-message {
+            margin-top: 20px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="verification-container">
+        <form id="verification-form">
+            <input type="password" id="password" placeholder="密碼1">
+            <input type="button" id="verify-button" value="送出" onclick="verifyPassword()">
+        </form>
+        <div id="verification-message"></div>
+    </div>
+
+    <script>
+        function verifyPassword() {
+            var passwordInput = document.getElementById("password").value;
+            var verificationMessage = document.getElementById("verification-message");
+
+            if (passwordInput === "314159") {
+                verificationMessage.innerHTML = "密碼正確";
+                verificationMessage.style.color = "green";
+                window.location.href = "登入介面2.htm";
+            } else {
+                verificationMessage.innerHTML = "密碼錯誤";
+                verificationMessage.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

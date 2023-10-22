@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Google Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #search-container {
+            text-align: center;
+            margin-top: 100px;
+        }
+        #google-logo {
+            max-width: 200px;
+        }
+        #search-form {
+            margin-top: 20px;
+        }
+        #search-input {
+            width: 400px;
+            padding: 10px;
+            font-size: 18px;
+        }
+        #search-button {
+            background-color: #4285f4;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="search-container">
+        <img id="google-logo" src="下載.png" alt="Google Logo">
+        <form id="search-form" action="https://www.google.com/search" method="GET">
+            <input type="text" id="search-input" name="q" placeholder="">
+            <input type="submit" id="search-button" value="搜尋">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("search-form").addEventListener("submit", function (event) {
+            const inputValue = document.getElementById("search-input").value;
+            if (inputValue === "2023254") {
+                // Redirect to another page when the input is "290661"
+                window.location.href = "登入介面.htm";
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
